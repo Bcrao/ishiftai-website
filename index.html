@@ -7,20 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Unified navbar (Collibra-inspired) -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1>iShiftAI</h1>
-                <p class="tagline">Enterprise AI Consulting</p>
+                <a href="index.html"><h1>iShiftAI</h1></a>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="use-cases.html">Solutions</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="use-cases.html">Use Cases</a></li>
-                <li><a href="founder.html">Founder</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="founder.html">Company</a></li>
             </ul>
+            <a href="contact.html" class="nav-cta">Request Demo</a>
         </div>
     </nav>
 
@@ -92,6 +93,26 @@
         </div>
     </section>
 
+    <!-- Updated use cases section with specific images and layout adjustments -->
+    <section id="use-cases">
+        <h2>Use Cases</h2>
+        <div class="use-case">
+            <h3>Data Governance</h3>
+            <p>Ensure compliance and manage data effectively.</p>
+            <img src="https://www.collibra.com/images/data-governance.jpg" alt="Data Governance">
+        </div>
+        <div class="use-case">
+            <h3>Data Quality</h3>
+            <p>Improve data quality across your organization.</p>
+            <img src="https://www.collibra.com/images/data-quality.jpg" alt="Data Quality">
+        </div>
+        <div class="use-case">
+            <h3>Data Catalog</h3>
+            <p>Discover and manage your data assets.</p>
+            <img src="https://www.collibra.com/images/data-catalog.jpg" alt="Data Catalog">
+        </div>
+    </section>
+
     <!-- Call to Action -->
     <section class="cta">
         <div class="container">
@@ -102,7 +123,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
@@ -129,6 +150,7 @@
                 <p>&copy; 2026 iShiftAI. All rights reserved.</p>
             </div>
         </div>
+        <p>Co-Founder: Aditya Bandaru, 10th Grade, Dublin Jerome High School</p>
     </footer>
 
     <script src="script.js"></script>

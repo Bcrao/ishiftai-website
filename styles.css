@@ -19,34 +19,35 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
+    background-color: #f4f4f4;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.header {
+    padding: 20px;
+    text-align: center;
 }
 
-/* Navigation */
 .navbar {
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #052238 0%, #003d66 100%);
+    color: white;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 4px 18px rgba(2,6,23,0.18);
 }
 
 .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 14px 28px;
 }
 
 .nav-brand h1 {
-    color: var(--primary-color);
-    font-size: 24px;
-    margin-bottom: 5px;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 0;
+    font-weight: 700;
 }
 
 .nav-brand .tagline {
@@ -57,40 +58,59 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 22px;
+    align-items: center;
 }
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-    transition: color 0.3s;
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+    padding: 8px 6px;
+    border-radius: 6px;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
+    color: white;
+    background: rgba(255,255,255,0.06);
+}
+
+.nav-cta {
+    background: white;
     color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 3px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-cta:hover {
+    background: #f0f8ff;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, #003d66 0%, #0078d4 100%);
     color: white;
-    padding: 100px 20px;
-    text-align: center;
+    padding: 90px 20px;
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .hero-content h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 18px;
+    font-weight: 800;
 }
 
 .hero-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 18px;
+    margin-bottom: 24px;
     opacity: 0.95;
 }
 
@@ -295,12 +315,25 @@ body {
     background: white;
 }
 
+/* Updated styles for new use cases section */
+#use-cases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .use-case {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin-bottom: 80px;
-    align-items: center;
+    width: 32%;
+    margin: 12px;
+    padding: 22px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+
+.use-case img {
+    max-width: 100%;
+    height: auto;
 }
 
 .use-case-reverse {
@@ -312,9 +345,9 @@ body {
 }
 
 .use-case-content h3 {
-    font-size: 28px;
-    color: var(--primary-color);
-    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--text-dark);
+    margin-bottom: 12px;
 }
 
 .use-case-meta {
@@ -361,13 +394,11 @@ body {
 }
 
 .use-case-illustration {
-    background: #f9f9f9;
+    background: transparent;
     border-radius: 8px;
-    padding: 30px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 12px 0 0 0;
+    height: auto;
+    display: block;
 }
 
 .use-case-illustration svg {
@@ -377,7 +408,7 @@ body {
 
 /* Founder Section */
 .founder-section {
-    padding: 80px 20px;
+    padding: 60px 20px;
     background: var(--light-bg);
 }
 
@@ -787,6 +818,48 @@ body {
 
 .contact-form button {
     margin-top: 10px;
+}
+
+/* Co-founder styling */
+.site-cofounder {
+    text-align: center;
+    color: var(--text-dark);
+    margin: 20px 0 40px;
+    font-weight: 600;
+}
+
+.cofounder-highlight {
+    margin-top: 20px;
+    padding: 18px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.cofounder-highlight h3 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+/* Co-founder layout */
+.cofounder-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.cofounder-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+}
+.cofounder-text h3 {
+    margin: 0 0 6px 0;
+}
+.cofounder-text p {
+    margin: 0;
+    color: var(--text-light);
 }
 
 .contact-info h2 {
