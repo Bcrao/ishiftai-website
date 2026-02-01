@@ -29,8 +29,10 @@
     scroll-behavior: smooth;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Orbitron:wght@700;900&display=swap');
+
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     line-height: 1.7;
     color: var(--text-dark);
     background: linear-gradient(to bottom, #ffffff 0%, #f8f9fb 100%);
@@ -41,6 +43,11 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
 }
 
 .header {
@@ -72,12 +79,14 @@ body {
 
 .nav-brand h1 {
     color: white;
-    font-size: 22px;
+    font-size: 26px;
     margin-bottom: 0;
     font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
     display: flex;
     align-items: center;
     gap: 2px;
+    letter-spacing: 1px;
 }
 
 .nav-brand a {
@@ -90,11 +99,11 @@ body {
 .ai-logo {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 3px 8px;
+    gap: 6px;
+    padding: 4px 12px;
     background: linear-gradient(135deg, #50e6ff 0%, #0078d4 100%);
-    border-radius: 6px;
-    margin-left: 2px;
+    border-radius: 8px;
+    margin-left: 4px;
     position: relative;
     overflow: hidden;
     animation: glow 2s ease-in-out infinite;
@@ -107,16 +116,16 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
     animation: shine 3s infinite;
 }
 
 @keyframes glow {
     0%, 100% {
-        box-shadow: 0 0 10px rgba(80, 230, 255, 0.3);
+        box-shadow: 0 0 15px rgba(80, 230, 255, 0.4), 0 0 30px rgba(0, 120, 212, 0.2);
     }
     50% {
-        box-shadow: 0 0 20px rgba(80, 230, 255, 0.6), 0 0 30px rgba(0, 120, 212, 0.3);
+        box-shadow: 0 0 25px rgba(80, 230, 255, 0.7), 0 0 40px rgba(0, 120, 212, 0.4);
     }
 }
 
@@ -129,20 +138,29 @@ body {
     }
 }
 
-.robot-icon {
-    width: 18px;
-    height: 18px;
+.robot-letter-a,
+.robot-letter-i {
+    height: 28px;
     color: white;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-    animation: pulse 2s ease-in-out infinite;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-@keyframes pulse {
+.robot-letter-a {
+    width: 28px;
+    animation: robotPulse 3s ease-in-out infinite;
+}
+
+.robot-letter-i {
+    width: 14px;
+    animation: robotPulse 3s ease-in-out infinite 0.5s;
+}
+
+@keyframes robotPulse {
     0%, 100% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.05);
+        transform: scale(1.08);
     }
 }
 
